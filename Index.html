@@ -56,6 +56,53 @@
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
         }
+
+        #portfolio-container {
+            width: 80%; /* This makes the container 80% of the page width */
+            margin: 0 auto; /* Centers the container on the page */
+        }   
+         #portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); /* Increased min-width to make blocks wider */
+            gap: 20px;
+            margin-top: 30px;
+         }
+
+         .project-item {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex; /* Use flexbox to align content horizontally */
+    justify-content: space-between; /* Push image and text to opposite sides */
+    align-items: center; /* Vertically center the image and text */
+    gap: 20px; /* Space between the image and text */
+}
+
+.project-item img {
+    max-width: 45%; /* Ensure the image doesn’t take too much space */
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-item div {
+    max-width: 50%; /* Keep the text area from growing too wide */
+}
+
+.project-item h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
     </style>
 </head>
 <body>
@@ -64,12 +111,19 @@
         <h1>Rauen's Portfolio</h1>
     </header>
 
-    <section id="portfolio-items">
-        <!-- Placeholder for future items -->
-        <div class="item">
-            <p>Placeholder for future items.</p>
+    <section id="portfolio-container">
+        <div id="portfolio-items">
+            <!--Fishing game-->
+            <div class="project-item">
+                <div> 
+                    <h2>Fishing Game</h2>
+                    <p>I was appart of the team that developed Fishing Game.</p>
+                    <p>Its a 3D world where you would run around and try earn gold through fishing.</p>
+                    <p>The game was build in Unity and coded in C#. All resorses were self built</p>
+                </div>
+                <img src="Projects/Fishing Game overview.jpg" alt="Fishing Game">
+            </div>
         </div>
     </section>
-
 </body>
 </html>
