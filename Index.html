@@ -63,19 +63,21 @@
         }   
          #portfolio-items {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); /* Increased min-width to make blocks wider */
+            grid-template-columns: 1fr; /* Increased min-width to make blocks wider */
             gap: 20px;
             margin-top: 30px;
          }
 
         .project-item {
-            background-color: #1ef3eb;
+            width: 100%;
+            background-color: #00fff7;
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
             display: flex; /* Use flexbox to align content horizontally */
+            flex-direction: row;
             justify-content: space-between; /* Push image and text to opposite sides */
             align-items: center; /* Vertically center the image and text */
             gap: 20px; /* Space between the image and text */
@@ -94,13 +96,17 @@
         .project-item h2 {
             font-size: 1.5em;
             margin-top: 0;
-            color: #333;
+            color: #000000;
         }
         
         .project-item p {
             font-size: 1em;
-            color: #555;
+            color: #000000;
             line-height: 1.6;
+        }
+        .project-item video {
+            max-width: 45%; /* Adjusts the width of the video to match the image size */
+            border-radius: 5px; /* Adds rounded corners to the video */
         }
 
     </style>
@@ -122,15 +128,26 @@
                         After enough traps have been step on the snake dies.
                     </p>
                     <p>The snake will travel through the maze and if it crosses your path you will take damage.</p>
-                    <p>Mazes are always unique and will be different everytime you play the game.</p>
+                    <p>Mazes are always be unique everytime you play the game.</p>
                 </div>
-                <!-- Add the video here -->
-                <video controls width="45%"> 
-                    <source src="Porjects/Snake Game.mp4" type="video/mp4">
+                <video autoplay loop muted controls width="45%"> 
+                    <source src="Projects/Snake Game.mp4"  type = video/mp4>
                     Your browser does not support the video tag.
                 </video>
             </div>
-
+            <!--Snow Scene-->
+            <div class="project-item">
+                <div>
+                    <h2>Snow Scene</h2>
+                    <p>Pixel art snow scene made in C using free Glut</p>
+                    <p>This is a very simple snow scene, with many particals being reused and recycled</p>
+                    <p>It also has some very basic features such as a growing snow man and a rainbow</p>
+                 </div>
+                <video autoplay loop muted controls width="45%"> 
+                    <source src="Projects/Snow Scene.mp4"  type = video/mp4>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <!--Fishing game-->
             <div class="project-item">
                 <div> 
